@@ -1,1 +1,1 @@
-These are my solutions to long challeneg problems on codechef.
+These are my solutions to long challenge problems on codechef.
