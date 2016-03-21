@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include<math.h>
+ int main(void)
+ {
+long long int n,res,i,c=0,d=0,diff,s;
+scanf("%lld",&n);
+long long int a[n],t;
+for(i=0;i<n;i++)
+{
+scanf("%lld",&a[i]);
+}
+for(i=0;i<n;i++)
+{
+t=a[i],diff=0,res=0,s=0,c=0,d=0;
+if(a[i]%5!=0)
+res=t;
+else
+{
+while(a[i]%5==0)
+{
+c++;
+a[i]/=5;
+}
+while(a[i]%2==0)
+{
+d++;
+a[i]/=2;
+}
+if(c<=d)
+res=t;
+else if(c>d)
+{
+diff=c-d;
+if(diff%2==0)
+s=diff/2;
+else if(diff%2!=0)
+s=diff/2+1;
+res=t*pow(4,s);
+}
+}
+printf("%lld\n",res);
+}
+	return 0;
+} 
