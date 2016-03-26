@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main()
+{
+int t;
+long long int c=0;
+scanf("%d",&t);
+long long int n,m;
+while(t--)
+{c=0;
+scanf("%lld%lld",&n,&m);
+long long int a[m],i;
+for(i=0;i<m;i++)
+scanf("%lld",&a[i]);
+sort(a,a+m);
+ long long int z=m;
+for(i=0;i<z;i++)
+{
+if(m!=1)
+{
+if(a[i]<(m-1))
+{
+m=m-a[i]-1;
+c+=a[i];
+}
+else if(a[i]>=(m-1))
+{
+c+=m-1;
+m=1;
+}
+}
+}
+printf("%lld\n",c);
+ 
+}
+ 
+	return 0;
+} 
+ 
