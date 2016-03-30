@@ -1,0 +1,17 @@
+    #include <iostream>
+    using namespace std;
+    #include<bits/stdc++.h>
+    int main()
+    {
+    int t,m;
+    scanf("%d",&t);
+    double c1,c2,i,p;
+    while(t--)
+    {
+    scanf("%d%lf",&m,&p);
+    c2=(p*(1-pow(-p,m-1)))/(1+p);
+    c1=1-c2;
+    printf("%0.7lf %0.7lf\n",c1*1000000000,c2*1000000000);
+    }
+    return 0;
+    }  
