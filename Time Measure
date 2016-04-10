@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+#include<bits/stdc++.h>
+int main() 
+{
+int t;
+double A;
+cin>>t;
+while(t--)
+{
+cin>>A;
+int i,j;
+double hr,min,res,comp;
+for(i=0;i<12;i++)
+{
+for(j=0;j<60;j++)
+{
+hr=i*30+j*0.5;
+min=j*6;
+res=abs(hr-min);
+comp=360-res;
+if(abs(res-A)<1.0/120)
+{
+if(i<10 && j<10)
+cout<<0<<i<<':'<<0<<j<<endl;
+else if(i<10 && j>=10)
+cout<<0<<i<<':'<<j<<endl;
+else if(i>=10 && j<10)
+cout<<i<<':'<<0<<j<<endl;
+else
+cout<<i<<':'<<j<<endl;
+}
+else if(abs(comp-A)<1.0/120)
+{
+if(i<10 && j<10)
+cout<<0<<i<<':'<<0<<j<<endl;
+else if(i<10 && j>=10)
+cout<<0<<i<<':'<<j<<endl;
+else if(i>=10 && j<10)
+cout<<i<<':'<<0<<j<<endl;
+else
+cout<<i<<':'<<j<<endl;
+}
+ 
+}}}
+return 0;
+} 
